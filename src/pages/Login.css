@@ -1,14 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Poppins:wght@400;500;600&display=swap");
+
+/* Background with cursor-following radial gradient */
 :root {
   --x: 50%;
   --y: 50%;
 }
-
 body {
   background: radial-gradient(circle at var(--x) var(--y), #6ee7b7, #3b82f6, #9333ea);
   transition: background 0.2s ease;
-  font-family: "Poppins", "Rubik", sans-serif;
+  font-family: "Poppins", "Montserrat", sans-serif;
 }
 
+/* Container */
 .login-bg {
   min-height: 100vh;
   display: flex;
@@ -16,6 +19,7 @@ body {
   align-items: center;
 }
 
+/* Card */
 .login-card {
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(20px);
@@ -26,21 +30,20 @@ body {
   text-align: center;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-.login-card:hover {
-  transform: perspective(1000px) rotateY(5deg) rotateX(5deg);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-}
 
+/* Title */
 .login-title {
   font-size: 2rem;
   margin: 1.5rem 0;
   font-weight: 800;
+  font-family: "Montserrat", sans-serif;
   background: linear-gradient(90deg, #3b82f6, #9333ea);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
+/* Labels */
 .login-label {
   text-align: left;
   margin-bottom: 0.5rem;
@@ -48,8 +51,10 @@ body {
   font-weight: 600;
   color: #f1f5f9;
   display: block;
+  font-family: "Poppins", sans-serif;
 }
 
+/* Inputs */
 .login-input {
   width: 100%;
   padding: 0.9rem;
@@ -67,6 +72,7 @@ body {
   border: 1px solid #9333ea;
 }
 
+/* Button */
 .login-button {
   width: 100%;
   padding: 1rem;
@@ -77,6 +83,7 @@ body {
   color: #fff;
   font-size: 1.2rem;
   font-weight: 700;
+  font-family: "Montserrat", sans-serif;
   cursor: pointer;
   transition: background-position 0.4s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -86,29 +93,9 @@ body {
   box-shadow: 0 8px 20px rgba(147, 51, 234, 0.6);
 }
 
-/* Animations */
-@keyframes tire-rotate {
-  0% {
-    transform: rotate(0deg);
-    transform-origin: center;
-  }
-  100% {
-    transform: rotate(360deg);
-    transform-origin: center;
-  }
-}
-
-@keyframes dust-float-right {
-  0% {
-    opacity: 1;
-    transform: translate(0, 0) scale(1);
-  }
-  50% {
-    opacity: 0.5;
-    transform: translate(15px, -20px) scale(0.8);
-  }
-  100% {
-    opacity: 0;
-    transform: translate(30px, -40px) scale(0.5);
-  }
+/* SVG Bus */
+.bus-logo {
+  width: 200px;
+  margin: auto;
+  filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.3));
 }
