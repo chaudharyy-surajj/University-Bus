@@ -42,8 +42,14 @@ const BusLogo = () => (
 const Login = ({ onLogin }) => {
   useEffect(() => {
     const card = document.querySelector(".login-card");
+    const bg = document.querySelector(".login-bg");
 
     const handleMouseMove = (e) => {
+      // Update CSS variables for the background
+      bg.style.setProperty("--x", `${e.clientX}px`);
+      bg.style.setProperty("--y", `${e.clientY}px`);
+
+      // Card tilt effect
       const rect = card.getBoundingClientRect();
       const x = e.clientX - rect.left;
       const y = e.clientY - rect.top;
@@ -61,11 +67,12 @@ const Login = ({ onLogin }) => {
       card.style.transform = "perspective(1000px) rotateX(0deg) rotateY(0deg)";
     };
 
-    card.addEventListener("mousemove", handleMouseMove);
+    // Add event listeners to the entire document for background and card for the tilt effect
+    document.addEventListener("mousemove", handleMouseMove);
     card.addEventListener("mouseleave", resetTransform);
 
     return () => {
-      card.removeEventListener("mousemove", handleMouseMove);
+      document.removeEventListener("mousemove", handleMouseMove);
       card.removeEventListener("mouseleave", resetTransform);
     };
   }, []);

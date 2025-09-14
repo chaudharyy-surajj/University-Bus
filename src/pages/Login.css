@@ -5,36 +5,34 @@
   --x: 50%;
   --y: 50%;
 }
-body {
-  background: radial-gradient(circle at var(--x) var(--y), #6ee7b7, #3b82f6, #9333ea);
-  transition: background 0.2s ease;
-  font-family: "Poppins", "Montserrat", sans-serif;
-}
-
-/* Container */
 .login-bg {
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  background: radial-gradient(circle at var(--x) var(--y), #6ee7b7, #3b82f6, #9333ea);
+  transition: background 0.2s ease;
+  font-family: "Poppins", "Montserrat", sans-serif;
 }
 
-/* Card */
+/* Card - now more opaque and with a subtle border to differentiate it */
 .login-card {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(1, 4, 15, 0.8); /* Darker and more opaque background */
   backdrop-filter: blur(20px);
-  padding: 2rem 2.5rem;
+  padding: 2.5rem 3rem; /* Slightly more padding for a roomier feel */
   border-radius: 1.5rem;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
-  width: 350px;
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle light border */
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.9); /* Stronger, darker shadow */
+  width: 380px; /* Slightly wider */
   text-align: center;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 /* Title */
 .login-title {
-  font-size: 2rem;
-  margin: 1.5rem 0;
+  font-size: 2.2rem; /* Slightly larger title */
+  margin: 1.5rem 0 2rem; /* More margin at the bottom */
   font-weight: 800;
   font-family: "Montserrat", sans-serif;
   background: linear-gradient(90deg, #3b82f6, #9333ea);
@@ -43,59 +41,64 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
-/* Labels */
+/* Labels - brighter color for better readability */
 .login-label {
   text-align: left;
-  margin-bottom: 0.5rem;
-  font-size: 0.95rem;
+  margin-bottom: 0.6rem;
+  font-size: 1rem; /* Slightly larger font size */
   font-weight: 600;
-  color: #f1f5f9;
+  color: #e2e8f0; /* Brighter white */
   display: block;
   font-family: "Poppins", sans-serif;
 }
 
-/* Inputs */
+/* Inputs - more distinct background and border */
 .login-input {
   width: 100%;
-  padding: 0.9rem;
-  margin-bottom: 1.5rem;
+  padding: 1rem; /* Slightly more padding */
+  margin-bottom: 1.8rem; /* More margin */
   border-radius: 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Clearer border */
+  background: rgba(255, 255, 255, 0.1); /* More distinct semi-transparent background */
   color: #fff;
-  font-size: 1rem;
+  font-size: 1.05rem; /* Slightly larger font size */
   outline: none;
-  transition: box-shadow 0.3s ease, border 0.3s ease;
+  transition: box-shadow 0.3s ease, border 0.3s ease, background 0.3s ease;
+}
+.login-input::placeholder {
+    color: rgba(255, 255, 255, 0.6); /* Clearer placeholder color */
 }
 .login-input:focus {
-  box-shadow: 0 0 12px rgba(147, 51, 234, 0.7);
+  box-shadow: 0 0 15px rgba(147, 51, 234, 0.8);
   border: 1px solid #9333ea;
+  background: rgba(255, 255, 255, 0.15); /* Slightly brighter on focus */
 }
 
 /* Button */
 .login-button {
   width: 100%;
-  padding: 1rem;
+  padding: 1.1rem; /* Slightly more padding */
   border-radius: 1rem;
   border: none;
   background: linear-gradient(90deg, #3b82f6, #9333ea, #6ee7b7);
   background-size: 300% 100%;
   color: #fff;
-  font-size: 1.2rem;
+  font-size: 1.3rem; /* Slightly larger font size */
   font-weight: 700;
   font-family: "Montserrat", sans-serif;
   cursor: pointer;
   transition: background-position 0.4s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  margin-top: 1rem; /* Added top margin to differentiate from inputs */
 }
 .login-button:hover {
   background-position: 100% 0;
-  transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(147, 51, 234, 0.6);
+  transform: scale(1.03); /* Slightly less aggressive scale on hover */
+  box-shadow: 0 10px 25px rgba(147, 51, 234, 0.7); /* Stronger hover shadow */
 }
 
-/* SVG Bus */
+/* SVG Bus - subtle filter for more depth */
 .bus-logo {
   width: 200px;
   margin: auto;
-  filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.3));
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5)); /* Stronger shadow */
 }
