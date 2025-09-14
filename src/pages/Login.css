@@ -65,25 +65,15 @@
   width: 420px;
   text-align: center;
   z-index: 10;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
 .login-card:hover {
-  transform: translateY(-10px) rotate(1deg);
+  transform: scale(1.05);
   box-shadow:
-    0 40px 80px -15px rgba(0, 0, 0, 0.8),
+    0 35px 70px -15px rgba(0, 0, 0, 0.8),
     0 0 0 1px rgba(44, 99, 246, 0.4),
     inset 0 1px 0 rgba(255, 255, 255, 0.2);
-  animation: float 6s ease-in-out infinite;
-}
-
-@keyframes float {
-  0%, 100% { 
-    transform: translateY(-10px) rotate(1deg); 
-  }
-  50% { 
-    transform: translateY(-18px) rotate(2deg); 
-  }
 }
 
 .logo-container {
@@ -96,6 +86,15 @@
   margin: auto;
   filter: drop-shadow(0 15px 35px rgba(44, 99, 246, 0.4));
   animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { 
+    transform: translateY(0px) rotate(0deg); 
+  }
+  50% { 
+    transform: translateY(-10px) rotate(2deg); 
+  }
 }
 
 .title-container {
@@ -130,10 +129,8 @@
   letter-spacing: -0.04em;
   transition: all 0.4s ease;
   animation: titleGlow 8s ease-in-out infinite;
-  text-shadow: 
-    0 0 25px rgba(44, 99, 246, 0.8),
-    0 0 50px rgba(132, 73, 247, 0.6),
-    0 0 75px rgba(91, 76, 240, 0.4);
+  text-shadow: none;
+  filter: none;
 }
 
 @keyframes titleGlow {
@@ -150,31 +147,11 @@
   font-size: 1.4rem;
   font-weight: 600;
   color: #e0e7ff;
-  text-shadow: 
-    0 0 20px rgba(44, 99, 246, 0.9),
-    0 0 40px rgba(132, 73, 247, 0.7),
-    0 0 60px rgba(91, 76, 240, 0.5);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   transition: all 0.4s ease;
-  animation: scriptGlow 6s ease-in-out infinite;
-}
-
-@keyframes scriptGlow {
-  0%, 100% {
-    text-shadow: 
-      0 0 20px rgba(44, 99, 246, 0.9),
-      0 0 40px rgba(132, 73, 247, 0.7),
-      0 0 60px rgba(91, 76, 240, 0.5);
-    transform: scale(1);
-  }
-  50% {
-    text-shadow: 
-      0 0 30px rgba(132, 73, 247, 1),
-      0 0 50px rgba(44, 99, 246, 0.9),
-      0 0 70px rgba(91, 76, 240, 0.7);
-    transform: scale(1.02);
-  }
+  text-shadow: none;
+  filter: none;
 }
 
 .title-underline {
@@ -186,7 +163,7 @@
   border-radius: 2px;
   transition: all 0.4s ease;
   animation: underlineGlow 6s ease-in-out infinite;
-  box-shadow: 0 0 15px rgba(44, 99, 246, 0.6);
+  box-shadow: none;
 }
 
 @keyframes underlineGlow {
@@ -203,26 +180,21 @@
   background-clip: text;
   -webkit-background-clip: text;
   transform: translateY(-2px) scale(1.05);
-  filter: drop-shadow(0 0 30px rgba(44, 99, 246, 0.8));
-  text-shadow: 
-    0 0 35px rgba(44, 99, 246, 1),
-    0 0 60px rgba(132, 73, 247, 0.9),
-    0 0 85px rgba(91, 76, 240, 0.7);
+  filter: none;
+  text-shadow: none;
 }
 
 .login-title:hover .title-sub {
-  color: #2C63F6;
-  text-shadow: 
-    0 0 25px rgba(44, 99, 246, 1),
-    0 0 45px rgba(132, 73, 247, 0.9),
-    0 0 65px rgba(91, 76, 240, 0.7);
+  color: #e0e7ff;
+  text-shadow: none;
+  filter: none;
   transform: translateY(-1px) scale(1.05);
 }
 
 .login-title:hover .title-underline {
   width: 120px;
   background: linear-gradient(90deg, #2C63F6 0%, #ffffff 50%, #8449F7 100%);
-  box-shadow: 0 0 25px rgba(44, 99, 246, 0.8);
+  box-shadow: none;
 }
 
 .login-subtitle {
